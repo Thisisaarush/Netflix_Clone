@@ -4,10 +4,27 @@ import styles from "../styles/Home.module.css";
 // components
 import { Banner } from "../components/Banner/Banner.component";
 import { NavBar } from "../components/NavBar/NavBar.component";
-import { Card } from "../components/Card/Card.component";
 import { SectionCards } from "../components/Card/SectionCards.components";
 
 export default function Home() {
+  const disneyVideos = [
+    {
+      id: 0,
+      imgUrl: "/banner.jpg",
+      size: "large",
+    },
+    {
+      id: 1,
+      imgUrl: "/banner.jpg",
+      size: "large",
+    },
+    {
+      id: 2,
+      imgUrl: "/banner.jpg",
+      size: "large",
+    },
+  ];
+
   return (
     <div className={styles.container}>
       <Head>
@@ -23,7 +40,9 @@ export default function Home() {
           subTitle="Watch the Bank Robbery Finale with a little bit of drama"
           imgUrl="/banner.jpg"
         />
-        <SectionCards title="Disney" />
+        <div className={styles.sectionWrapper}>
+          <SectionCards title="Disney" videos={disneyVideos} />
+        </div>
       </main>
     </div>
   );

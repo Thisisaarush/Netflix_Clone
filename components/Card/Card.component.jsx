@@ -21,7 +21,7 @@ export const Card = ({ imgUrl = "/banner.jpg", size = "medium" }) => {
     <div className={styles.container}>
       <motion.div
         className={cls(styles.imgMotionWrapper, classMap[size])}
-        whileHover={{ scale: 1.1 }}
+        whileHover={{ scaleY: 1.1 }}
       >
         <Image
           src={imgSrc}
